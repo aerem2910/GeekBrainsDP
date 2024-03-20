@@ -1,0 +1,48 @@
+﻿<Window x:Class="ChatClient.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:ChatClient"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="420" Width="470" Loaded="Window_Loaded" Closing="Window_Closing">
+    <Grid HorizontalAlignment="Left" Width="470" Height="400">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="10"/>
+            <RowDefinition Height="27"/>
+            <RowDefinition Height="5"/>
+            <RowDefinition Height="27"/>
+            <RowDefinition Height="5"/>
+            <RowDefinition Height="185"/>
+            <RowDefinition Height="131"/>
+            <RowDefinition Height="10"/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="10"/>
+            <ColumnDefinition Width="100"/>
+            <ColumnDefinition Width="30"/>
+            <ColumnDefinition Width="320"/>
+            <ColumnDefinition Width="10"/>
+        </Grid.ColumnDefinitions>
+        <TextBox x:Name="tbUserName" HorizontalAlignment="Center" TextWrapping="Wrap" Text="Имя пользователя" VerticalAlignment="Center" Width="320" Height="32" RenderTransformOrigin="0.48,1.01" Grid.Column="3" Grid.Row="1" Grid.RowSpan="2">
+            <TextBox.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform />
+                    <SkewTransform AngleY="0.437" />
+                    <RotateTransform Angle="-0.319" />
+                    <TranslateTransform Y="-1.264" X="0.247" />
+                </TransformGroup>
+            </TextBox.RenderTransform>
+        </TextBox>
+
+        <Button x:Name="bConnDicon" Click="Button_Click" Content="Connect" HorizontalAlignment="Center" Height="27" VerticalAlignment="Center" Width="100" RenderTransformOrigin="0.893,0.482" Grid.Column="1" Grid.Row="1" Background="{x:Null}" BorderBrush="#FF707070" />
+
+        <Button Content="Отправить " Click="btnSendImage_Click" HorizontalAlignment="Center" Height="27" VerticalAlignment="Bottom" Width="100" Grid.Column="1" Grid.Row="3" BorderBrush="#FF707070" Background="{x:Null}" />
+
+        <ListBox x:Name="lbChat" HorizontalAlignment="Center" Height="185" VerticalAlignment="Top" Width="450" d:ItemsSource="{d:SampleData ItemCount=5}" Grid.ColumnSpan="3"  Grid.Column="1" Grid.Row="5" MouseRightButtonUp="lbChat_MouseRightButtonUp" IsSynchronizedWithCurrentItem="True" />
+
+        <Image Name="imgPreview" Visibility="Collapsed" Grid.ColumnSpan="5" Grid.RowSpan="8" />
+
+        <TextBox x:Name="tbMessage" HorizontalAlignment="Center" TextWrapping="Wrap" Text="" Width="450" Height="121" Grid.ColumnSpan="3" KeyDown="tbMessage_KeyDown" Grid.Column="1" Grid.Row="6" Margin="0,5,0,5" />
+    </Grid>
+</Window>
