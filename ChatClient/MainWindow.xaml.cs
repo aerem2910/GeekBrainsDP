@@ -149,7 +149,7 @@ namespace ChatClient
 
         public void DisplayImageCallback(byte[] imageData, string imageName)
         {
-            //ListBoxItem lbi = new ListBoxItem();
+            
 
             try
             {
@@ -170,8 +170,7 @@ namespace ChatClient
                     lbChat.Items.Add(image);
                 }
 
-                //lbi.Tag = img; // Сохранение массива байтов в Tag
-                //lbi.Content = imageName; // Отображение текста
+                
             }
             catch (Exception ex)
             {
@@ -179,54 +178,10 @@ namespace ChatClient
             }
         }
 
-        //public void DisplayImage(byte[] imageData, string imageName)
-        //{
-        //    try
-        //    {
-        //        //using (MemoryStream stream = new MemoryStream(imageData))
-        //        //{
-        //        //    BitmapImage image = new BitmapImage();
-        //        //    image.BeginInit();
-        //        //    image.StreamSource = stream;
-        //        //    image.EndInit();
-        //        //    // Ваш код для отображения изображения в интерфейсе, например:
-        //        //    imgPreview.Source = image;
-        //        //}
-
-        //        ListBoxItem lbi = new ListBoxItem();
-        //        lbi.Tag = imageData; // Сохранение массива байтов в Tag
-        //        lbi.Content = imageName; // Отображение текста
-        //        lbChat.Items.Add(lbi);
-
-        //    }
-        //    catch (Exception ex)
-        //    {
-        //        MessageBox.Show($"Error displaying image: {ex.Message}");
-        //    }
-        //}
-
-        //public void DisplayImage(byte[] imageData, string imageName)
-        //{
-        //    try
-        //    {
-        //        using (MemoryStream stream = new MemoryStream(imageData))
-        //        {
-        //            BitmapImage image = new BitmapImage();
-        //            image.BeginInit();
-        //            image.StreamSource = stream;
-        //            image.EndInit();
-        //            imgPreview.Source = image;
-        //        }
-        //    }
-        //    catch (Exception ex)
-        //    {
-        //        MessageBox.Show($"Error displaying image: {ex.Message}");
-        //    }
-        //}
-
+              
         private void Window_Loaded(object sender, RoutedEventArgs e)
         {
-            // Ваш код, который должен быть выполнен при загрузке окна
+            //  Код, который может быть выполнен при загрузке окна
         }
 
         private void lbChat_MouseRightButtonUp(object sender, System.Windows.Input.MouseButtonEventArgs e)
